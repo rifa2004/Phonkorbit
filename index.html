@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>PhonkOrbit VERSION 01</title>
+</head>
+
+<body>
+
+    <!--======================================PHONKORBIT=====================================
+    LAYOUT COMPONENTS(TOP NAVIGATION BAR,LEFT SIDE BAR,MAIN CONTENT ,RIGHT SIDE BAR,BOTTOM MUSIC PLAYER)
+
+    -------------------------------------(1)TOP NAVIGATION BAR------------------------------->
+
+
+    <header class="top-header">
+
+
+        <!--Brand(logo,company name)-->
+        <div class="brand">
+            <a class="brand-link" href="/home">
+                <img class="brand-logo" src="assets/Logo.png" alt="company logo">
+                <span class="brand-name">
+                    <span class="brand-phonk">PHONK</span>
+                    <span class="brand-orbit">ORBIT</span>
+                </span>
+            </a>
+        </div>
+
+
+
+        <!--Search Bar-->
+        <section class="search">
+            <form action="/search" method="get" class="search-bar">
+                <div class="search-bar-container">
+                    <img class="search-icon" src="assets/search-icon.PNG" alt="search icon">
+                    <input id="search-input" type="search" name="search"
+                        placeholder="Search songs, artists, albums....">
+                </div>
+            </form>
+        </section>
+
+
+
+        <!---Global Actions-->
+        <div class="global-actions">
+
+
+            <a href="/pricing" class="premium-btn">
+                <img class="crown-icon" src="assets/crown.png" alt="premium">
+                <span>Upgrade to Premium</span>
+            </a>
+
+
+            <button type="button" class="notification-btn">
+                <img class="bell-icon" src="assets/bell-icon.PNG" alt="bell icon">
+            </button>
+
+
+            <button type="button" class="profile-btn">
+                <img class="profile-icon" src="assets/profile-icon.PNG" alt="profile icon">
+            </button>
+        </div>
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+    <!---------------------------------02) LEFT-SIDE NAVIGATION BAR----------------------------------------
+    =============LEFT SIDE NAVIGATION BAR(1)NAVIGATION 2)LIBRARY  3)PLAYLISTS 4)PREMIUM CARD=============-->
+
+
+    <div class="app-layout">
+
+        <aside class="left-sidebar">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="nav-item">
+                        <a href="/home" class="nav-link">
+                            <img class="nav-icon" src="assets/home-icon.svg" alt="home icon">
+                            <span class="nav-text">Home</span>
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/browse" class="nav-link">
+                            <img class="nav-icon" src="assets/browse-icon.svg" alt="browse icon">
+                            <span class="nav-text">Browse</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/radio" class="nav-link">
+                            <img class="nav-icon" src="assets/radio-icon.svg" alt="radio icon">
+                            <span class="nav-text">Radio</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/charts" class="nav-link">
+                            <img class="nav-icon" src="assets/charts-icon.svg" alt="charts icon">
+                            <span class="nav-text">Charts</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/artists" class="nav-link">
+                            <img class="nav-icon" src="assets/artists-icon.svg" alt="artists icon">
+                            <span class="nav-text">Artists</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/albums" class="nav-link">
+                            <img class="nav-icon" src="assets/albums-icon.svg" alt="albums icon">
+                            <span class="nav-text">Albums</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/genres" class="nav-link">
+                            <img class="nav-icon" src="assets/genres-icon.svg" alt="genres icon">
+                            <span class="nav-text">Genres</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/new-releases" class="nav-link">
+                            <img class="nav-icon" src="assets/new-releases-icon.svg" alt="new releases icon">
+                            <span class="nav-text">New Releases</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <section class="library">
+                <header class="section-header">
+                    <div class="secondary-header">
+                        <span class="title-text">YOUR LIBRARY</span>
+                        <button class="add-btn" type="button">+</button>
+                    </div>
+                </header>
+
+
+
+                <ul class="navigation-list">
+                    <li class="nav-item">
+                        <a href="/liked-songs" class="nav-link">
+                            <img class="nav-icon" src="assets/liked-songs-icon.svg" alt="liked songs icon">
+                            <span class="nav-text">Liked Songs</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/your-playlists" class="nav-link">
+                            <img class="nav-icon" src="assets/your-playlists-icon.svg" alt="your playlists icon">
+                            <span class="nav-text">Your Playlists</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/recently-played" class="nav-link">
+                            <img class="nav-icon" src="assets/recently-played-icon.svg" alt="recently played icon">
+                            <span class="nav-text">Recently Played</span>
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/downloads" class="nav-link">
+                            <img class="nav-icon" src="assets/downloads-icon.svg" alt="downloads icon">
+                            <span class="nav-text">Downloads</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+
+
+            </section>
+
+
+            <section class="playlists">
+                <header class="section-header">
+                    <div class="secondary-header">
+                        <span class="title-text">PLAYLISTS</span>
+                        <button class="add-btn" type="button">+</button>
+                    </div>
+                </header>
+
+
+                <ul class="card">
+                    <li class="card-items">
+                        <img class="playlist-img" src="assets/phonk-daily.png" alt="phonk daily">
+                        <div class="playlist-info">
+                            <h2 class="playlist-title">Phonk Daily</h2>
+                            <span class="playlist-text">50 tracks</span>
+                        </div>
+                    </li>
+
+
+                    <li class="card-items">
+                        <img class="playlist-img" src="assets/night-drive.png" alt="night drive">
+                        <div class="playlist-info">
+                            <h2 class="playlist-title">Night Drive</h2>
+                            <span class="playlist-text">73 tracks</span>
+                        </div>
+
+                    </li>
+
+                    <li class="card-items">
+                        <img class="playlist-img" src="assets/gym-phonk.png" alt="gym phonk">
+                        <div class="playlist-info">
+                            <h2 class="playlist-title">Gym Phonk</h2>
+                            <span class="playlist-text">40 tracks</span>
+                        </div>
+                    </li>
+
+                    <li class="card-items">
+                        <img class="playlist-img" src="assets/chill-phonk.png" alt="chill phonk">
+                        <div class="playlist-info">
+                            <h2 class="playlist-title">Chill Phonk</h2>
+                            <span class="playlist-text">58 tracks</span>
+                        </div>
+                    </li>
+
+                    <li class="card-items">
+                        <img class="playlist-img" src="assets/drift-mode.png" alt="drift mode">
+                        <div class="playlist-info">
+                            <h2 class="playlist-title">Drift Mode</h2>
+                            <span class="playlist-text">62 tracks</span>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </section>
+
+            <section class="premium-card">
+                <div class="premium-card-content">
+
+
+                    <a class="premium-brand-link" href="/home">
+                        <img class="premium-brand-logo" src="assets/Logo.png" alt="company logo">
+                        <span class="premium-brand-name">
+                            <span class="brand-phonk">PHONK</span>
+                            <span class="brand-orbit">ORBIT</span>
+                        </span>
+                    </a>
+
+                    <h2 class="premium-card-title">PREMIUM</h2>
+                    <ul class="premium-card-features">
+                        <li class="premium-card-feature">Ad-free listening</li>
+                        <li class="premium-card-feature">High-quality audio</li>
+                        <li class="premium-card-feature">Offline downloads</li>
+                        <li class="premium-card-feature">Exclusive content</li>
+
+                    </ul>
+
+
+                </div>
+
+                <a href="/pricing" class="premium-card-btn">
+                    <img class="crown-icon" src="assets/crown.png" alt="premium">
+                    <span>Try Premium</span>
+                </a>
+
+
+            </section>
+
+
+
+        </aside>
+
+
+
+
+
+
+        <!---------------------------------03) MAIN CONTENT ----------------------------------------
+    =============1)HERO SECTION,2)TRENDING,3)POPULAR ALBUMS,4)TOP ARTISTS,5)GENRES,6)GO PREMIUM,7)NEW RELEASES=============-->
+
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="hero-card">
+                    <div class="hero-image-container">
+                        <div class="hero-content">
+
+                            <span class="hero-title">W E L C O M E <br>T O</span>
+
+                            <span class="hero-brand-name">
+                                <span class="brand-phonk">PHONK</span>
+                                <span class="brand-orbit">ORBIT</span>
+                            </span>
+
+
+                            <p class="hero-description">
+                                THE HOME OF PHONK<br>
+                                BEATS THAT HIT DIFFERENT.
+                            </p>
+
+                            <div class="hero-buttons">
+                                <button class="primary-btn">Play Now</button>
+                                <button class="secondary-btn">Explore</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <img src="assets/hero-image.png" alt="hero image" class="hero-image">
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--================================2 (TRENDING NOW)====================================-->
+
+            <section class="trending">
+                <div class="main-section-header">
+                    <span class="main-section-title">TRENDING NOW</span>
+                    <a href="/trending" class="main-section-link">See All</a>
+
+                </div>
+
+                <div class="cards-row">
+                    <article class="cards">
+                        <div class="card-image">
+                            <img src="assets/metamorphosis.png" alt="metamorphosis" class="trending-img">
+                            <button class="play-btn">
+                                <img src="assets/play-icon.svg" alt="play icon" class="play-icon">
+                            </button>
+
+                        </div>
+
+
+                        <h3 class="track-title">METAMORPHOSIS</h3>
+                        <span class="track-artist">INTERWORLD</span>
+                    </article>
+
+                    <article class="cards">
+                        <div class="card-image">
+                            <img src="assets/murder-in-my-mind.png" alt="murder in my mind" class="trending-img">
+
+                            <button class="play-btn">
+
+                                <img src="assets/play-icon.svg" alt="play icon" class="play-icon">
+                            </button>
+
+                        </div>
+
+                        <h3 class="track-title">MURDER IN MY MIND</h3>
+                        <span class="track-artist">KORDHELL</span>
+                    </article>
+
+                    <article class="cards">
+                        <div class="card-image">
+                            <img src="assets/montagem-miau.png" alt="montagem miau" class="trending-img">
+
+                            <button class="play-btn">
+
+                                <img src="assets/play-icon.svg" alt="play icon" class="play-icon">
+
+                            </button>
+                        </div>
+
+
+                        <h3 class="track-title">MONTAGEM MIAU</h3>
+                        <span class="track-artist">Lenar</span>
+                    </article>
+
+
+                    <article class="cards">
+                        <div class="card-image">
+                            <img src="assets/TAKA-LA-DENTRO.png" alt="taka la dentro" class="trending-img">
+
+                            <button class="play-btn">
+
+                                <img src="assets/play-icon.svg" alt="play icon" class="play-icon">
+                            </button>
+                        </div>
+
+
+
+
+                        <h3 class="track-title">TAKA LA DENTRO</h3>
+                        <span class="track-artist">SEKIMANE</span>
+                    </article>
+
+
+
+                </div>
+            </section>
+
+
+            <!--================================3 (BRAZILIAN PHONK)====================================-->
+
+            <section class="brazilian-phonk">
+
+                <div class="main-section-header">
+                    <span class="main-section-title">BRAZILIAN PHONK</span>
+                    <a href="/brazilian-phonk" class="main-section-link">See All</a>
+                </div>
+
+                <div class="cards-grid">
+
+                    <article class="phonk-cards">
+                        <div class="phonk-img">
+                            <img src="assets/gozalo.png" alt="gozalo" class="brazilian-phonk-img">
+
+                        </div>
+
+                        <div class="phonk-info">
+                            <h3 class="track-title">GOZALO</h3>
+                            <span class="track-artist">Ariis</span>
+                        </div>
+
+                    </article>
+
+                    <article class="phonk-cards">
+                        <div class="phonk-img">
+                            <img src="assets/montagem-alquimia.png" alt="montagem alquimia" class="brazilian-phonk-img">
+                        </div>
+
+                        <div class="phonk-info">
+                            <h3 class="track-title">MONTAGEM ALQUIMIA</h3>
+                            <span class="track-artist">h6itam</span>
+                        </div>
+                    </article>
+
+                    <article class="phonk-cards">
+                        <div class="phonk-img">
+                            <img src="assets/sempero.png" alt="sempero" class="brazilian-phonk-img">
+
+                        </div>
+
+                        <div class="phonk-info">
+                            <h3 class="track-title">SEMPERO</h3>
+                            <span class="track-artist">QMIIR</span>
+                        </div>
+                    </article>
+
+
+
+                    <article class="phonk-cards">
+                        <div class="phonk-img">
+                            <img src="assets/olha-mensagem.png" alt="olha-mensagem" class="brazilian-phonk-img">
+
+                        </div>
+
+                        <div class="phonk-info">
+                            <h3 class="track-title">OLHA MENSAGEM</h3>
+                            <span class="track-artist">Sekimane</span>
+                        </div>
+                    </article>
+
+
+
+                    <article class="phonk-cards">
+                        <div class="phonk-img">
+                            <img src="assets/dia-delícia.png" alt="dia delicia" class="brazilian-phonk-img">
+
+                        </div>
+
+                        <div class="phonk-info">
+                            <h3 class="track-title">DIA DELÍCIA</h3>
+                            <span class="track-artist">Mc Staff, ΣP</span>
+                        </div>
+                    </article>
+
+
+                    <article class="phonk-cards">
+                        <div class="phonk-img">
+                            <img src="assets/tiki-tiki.png" alt="tiki tiki" class="brazilian-phonk-img">
+
+                        </div>
+
+                        <div class="phonk-info">
+                            <h3 class="track-title">TIKI TIKI</h3>
+                            <span class="track-artist">QMIIR</span>
+                        </div>
+                    </article>
+
+
+
+                </div>
+
+
+
+
+            </section>
+
+
+
+        </main>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

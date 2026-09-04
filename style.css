@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* =================================================================
+                    01) TOP NAVIGATION BAR
+   =================================================================*/
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Make the app-layout take all remaining vertical space */
+.app-layout {
+    flex: 1;
+    display: flex;
+}
+
+/* Make main-content take all remaining horizontal space */
+.main-content {
+    flex: 1;
+    min-width: 0;  /* prevents flex overflow */
+}
+
+.top-header {
+
+    height: 70px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border:#9ca3af solid 1px;
+   
+
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+}
+
+.brand-logo {
+    height: 60px;
+}
+
+.brand-name {
+    font-family: Orbitron;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+}
+
+.brand-phonk {
+    color: #F8FAFC;
+
+}
+
+.brand-orbit {
+    color:rgb(28, 126, 218);
+
+}
+
+
+
+.crown-icon {
+    height: 15px;
+
+}
+
+.bell-icon {
+    height: 24px;
+
+}
+
+.profile-icon {
+    height: 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.search-icon {
+    height: 20px;
+
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 20px;
+    background-color: #000000;
+    border-color: #9ca3af;
+    border-style: solid;
+    width: 300px;
+
+}
+
+#search-input {
+    color: #F8FAFC;
+    background-color: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    width: 100%;
+}
+
+#search-input::placeholder {
+    color: #9ca3af;
+}
+
+.global-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.premium-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #F8FAFC;
+    border: 1px solid #38bdf8;
+    border-radius: 10px;
+    padding: 12px 10px;
+    gap: 5px;
+
+
+}
+
+.notification-btn {
+    border: none;
+    background: none;
+
+}
+
+
+.profile-btn {
+    border: none;
+    background: none;
+}
+
+
+/* =================================================================
+                    02) SIDEBAR NAVIGATION BAR
+   =================================================================*/
+
+
+
+.app-layout {
+    display: flex;
+}
+
+.left-sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: black;
+    border: #9ca3af solid 1px;
+}
+
+
+/*-------------------
+(a) Navigation
+-------------------*/
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.nav-item {
+
+    padding: 10px 5px;
+
+}
+
+.nav-icon {
+    height: 18px;
+}
+
+.nav-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #F8FAFC;
+}
+
+
+/*-------------------
+(b)Library
+-------------------*/
+
+.title-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #F8FAFC;
+}
+
+.add-btn {
+    border: none;
+    background: none;
+    color: #F8FAFC;
+
+
+}
+
+.secondary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+
+}
+
+/*-------------------
+(c)Playlist Cards
+-------------------*/
+.playlist-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #F8FAFC;
+}
+
+.playlist-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.playlist-img {
+    height: 50px;
+    width: 50px;
+
+}
+
+.playlist-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+}
+
+
+
+.card-items {
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px 5px;
+}
+
+/*-------------------
+(d)Premium Card
+-------------------*/
+
+.premium-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+
+}
+
+.premium-brand-logo {
+    height: 30px;
+}
+
+.premium-brand-name {
+    font-family: Orbitron;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+
+}
+
+.premium-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 5px;
+
+}
+
+.premium-card-title {
+    font-family: Orbitron;
+    font-size: 20px;
+    font-weight: bold;
+    color: #F8FAFC;
+    padding-bottom: 20px;
+
+
+}
+
+.premium-card-features {
+    padding: 0px 10px;
+}
+
+.premium-card-feature {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #F8FAFC;
+}
+
+.premium-card-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #F8FAFC;
+    border: 1px solid #38bdf8;
+    border-radius: 10px;
+    padding: 10px 30px;
+    gap: 5px;
+
+}
+
+
+/* =================================================================  
+                    03) MAIN CONTENT
+   =================================================================*/
+
+
+
+/* =================================================================
+                     A) HERO SECTION
+   =================================================================*/
+.hero-section {
+    margin: 20px;
+    border:#9ca3af solid 1px;
+    
+}
+
+.hero-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hero-image-container {
+    position: relative;
+    width:max-content;    
+    height:100%;
+
+    
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 50px 0px 30px 20px;
+    gap: 50px;
+
+}
+
+.hero-title {
+    font-family:  Poppins;
+    font-size: 26px;
+    color: #F8FAFC;
+
+}
+
+.hero-brand-name {
+    font-family: Orbitron;
+    font-size: 50px;
+    display: flex;
+}
+
+
+
+.hero-description {
+    font-family: Poppins;
+    font-size: 26px;
+    color:#fbf7fb;
+    
+}
+
+.hero-image {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+
+}
+
+.hero-buttons{
+    display: flex;
+    justify-content: flex-start;
+    gap:15px;
+}
+
+.primary-btn{
+    
+    background-color: #116aaa;
+    color:#F8FAFC;
+    font-family: Poppins;
+    font-size: 14px;
+    border-radius:10px;
+    padding:10px 20px;
+    
+
+}
+
+.secondary-btn{
+    background-color: #F8FAFC;
+    color:#116aaa;
+    font-family: Poppins;
+    font-size: 14px;
+    border-radius:10px;
+    padding:10px 20px;
+}
+
+
+/*===================================
+          (b) TRENDING
+====================================*/
+
+.trending {
+    margin: 20px;
+    border: #9ca3af solid 1px;
+    
+}
+
+.main-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+
+}
+
+.main-section-title {
+    font-family: Poppins;
+    font-size: 14px;
+    color: #F8FAFC;
+
+}
+
+.main-section-link {
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 12px;
+    color: #F8FAFC;
+    border: 1px solid #38bdf8;
+    border-radius: 10px;
+    padding: 10px 20px;
+    gap: 5px;
+
+}
+
+
+.cards-row{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 40px;
+
+}
+
+.card-image{
+   position: relative;
+   height:200px;
+   width:150px;
+   border: 1px solid #9ca3af;
+ 
+}
+
+.trending-img{
+   height:100%;
+   width:100%;
+   object-fit: cover;
+}
+
+.play-btn{
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: transparent;
+    border: none;
+}
+
+.play-icon{
+    height: 25px;
+}
+
+.track-title{
+    font-family: Poppins;
+    font-size: 14px;    
+    color: #F8FAFC;
+    padding-top: 10px;
+}
+
+
+.track-artist{
+    font-family: Poppins;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+
+/*===================================
+          (c) BRAZILIAN PHONK
+====================================*/
+.brazilian-phonk{
+    margin: 20px;
+    border: #9ca3af solid 1px;
+    
+}
+
+.cards-grid{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    padding: 40px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border:#9ca3af solid 1px;
+}
+
+
+.phonk-cards{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    border:#9ca3af solid 1px;
+}
+
+.phonk-img{
+    height:80px;
+    width:80px;
+}
+
+.brazilian-phonk-img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.phonk-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+
+/* ============================================================
+   1) GLOBAL HOVER EFFECTS (scale + opacity)
+   ============================================================ */
+
+/* Smooth transition for all interactive elements */
+button,
+a,
+.nav-link,
+.premium-btn,
+.premium-card-btn,
+.primary-btn,
+.secondary-btn,
+.add-btn,
+.play-btn,
+.main-section-link,
+.card-items,
+.phonk-cards,
+.cards {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover: scale up slightly + fade */
+button:hover,
+a:hover,
+.nav-link:hover,
+.premium-btn:hover,
+.premium-card-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.add-btn:hover,
+.play-btn:hover,
+.main-section-link:hover,
+.card-items:hover,
+.phonk-cards:hover,
+.cards:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+/* Active (click): press down */
+button:active,
+a:active,
+.nav-link:active,
+.premium-btn:active,
+.premium-card-btn:active,
+.primary-btn:active,
+.secondary-btn:active,
+.add-btn:active,
+.play-btn:active,
+.main-section-link:active,
+.card-items:active,
+.phonk-cards:active,
+.cards:active {
+    transform: scale(0.96);
+    opacity: 0.7;
+}
+
