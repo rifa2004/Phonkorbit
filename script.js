@@ -1,0 +1,1 @@
+console.log("🚀 PhonkOrbit v2.0 - JavaScript loaded!");
